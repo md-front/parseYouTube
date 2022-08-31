@@ -1,0 +1,856 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "e5qblqjoY9M52RH6lE4DqFibsPc",
+  "nextPageToken": "CBkQAA",
+  "regionCode": "RU",
+  "pageInfo": {
+    "totalResults": 23061,
+    "resultsPerPage": 25
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "r38tHIgbF41ybHPTEa_f_riMkTQ",
+      "id": {
+        "kind": "youtube#channel",
+        "channelId": "UCOei1E1Vqq10S913OEqTWGw"
+      },
+      "snippet": {
+        "publishedAt": "2017-10-25T08:54:34Z",
+        "channelId": "UCOei1E1Vqq10S913OEqTWGw",
+        "title": "Podlodka",
+        "description": "Еженедельное аудио-шоу про разработку и всё, что с ней связано. Формат наших выпусков — это полное погружение в ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://yt3.ggpht.com/fgqCn_o2FOCEk5-H9mPLYRKqoS9L6sXUuTxWWPOFJmfQv00ljovl_dfHjQXRG1q4DDgpfxTewA=s88-c-k-c0xffffffff-no-rj-mo"
+          },
+          "medium": {
+            "url": "https://yt3.ggpht.com/fgqCn_o2FOCEk5-H9mPLYRKqoS9L6sXUuTxWWPOFJmfQv00ljovl_dfHjQXRG1q4DDgpfxTewA=s240-c-k-c0xffffffff-no-rj-mo"
+          },
+          "high": {
+            "url": "https://yt3.ggpht.com/fgqCn_o2FOCEk5-H9mPLYRKqoS9L6sXUuTxWWPOFJmfQv00ljovl_dfHjQXRG1q4DDgpfxTewA=s800-c-k-c0xffffffff-no-rj-mo"
+          }
+        },
+        "channelTitle": "Podlodka",
+        "liveBroadcastContent": "upcoming",
+        "publishTime": "2017-10-25T08:54:34Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "6xYALUQOQjzl01ie7j2YDWjyCU0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "zjWRBwLoIFI"
+      },
+      "snippet": {
+        "publishedAt": "2022-08-29T12:03:11Z",
+        "channelId": "UCOei1E1Vqq10S913OEqTWGw",
+        "title": "Podlodka #283 – Диски и носители, часть 2",
+        "description": "В первой части мы разобрались с железом, а в этот раз перешли к софту! Разбираемся в том, что происходит под капотом, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/zjWRBwLoIFI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/zjWRBwLoIFI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/zjWRBwLoIFI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Podlodka",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-08-29T12:03:11Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "QUvbJQzn8aWz003PfU-WuZo34Dk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "GoAixzrElQc"
+      },
+      "snippet": {
+        "publishedAt": "2020-11-16T23:19:49Z",
+        "channelId": "UCOei1E1Vqq10S913OEqTWGw",
+        "title": "Podlodka #190 – Обязательные знания для программиста",
+        "description": "Все мы делаем разные вещи – красим кнопки, перекладываем JSON'ы, пишем автотесты для луноходов или создаем ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/GoAixzrElQc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/GoAixzrElQc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/GoAixzrElQc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Podlodka",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-11-16T23:19:49Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "8OsoF5HxMPOS8nIqzqbZ_HqYTdU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "U8iq3JMQugA"
+      },
+      "snippet": {
+        "publishedAt": "2021-02-23T08:43:01Z",
+        "channelId": "UCOei1E1Vqq10S913OEqTWGw",
+        "title": "Podlodka #204 – Разработка приложений под TV",
+        "description": "Если вы думаете, что в разработке приложений под TV нет ничего увлекательного, то глубоко заблуждаетесь! Специфика ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/U8iq3JMQugA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/U8iq3JMQugA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/U8iq3JMQugA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Podlodka",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-02-23T08:43:01Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "C3jZ1FJDO6ggouAB84w68pR83mE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "prHziwNhOMQ"
+      },
+      "snippet": {
+        "publishedAt": "2022-03-21T17:01:52Z",
+        "channelId": "UCOei1E1Vqq10S913OEqTWGw",
+        "title": "Podlodka #260 – Криптовалюты",
+        "description": "Сейчас криптовалюты обретают актуальность как никогда. В гости к нам пришел Кирилл Пименов. Он отвечает за ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/prHziwNhOMQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/prHziwNhOMQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/prHziwNhOMQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Podlodka",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-03-21T17:01:52Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "kUiYhT_MbbCt3NUYQNblSXgCup8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "hcHes2GTN0U"
+      },
+      "snippet": {
+        "publishedAt": "2020-10-01T17:43:49Z",
+        "channelId": "UCOei1E1Vqq10S913OEqTWGw",
+        "title": "Podlodka Android Crew – Собеседуем экспертов: Cергей Боиштян, Денис Неклюдов, Артур Бадретдинов",
+        "description": "Посмотреть другие сессии Crew (Android, iOS, Teamlead, QA) ➡️ http://podlodka.io/crew ⬅️ Podlodka Android Crew ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/hcHes2GTN0U/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/hcHes2GTN0U/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/hcHes2GTN0U/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Podlodka",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-10-01T17:43:49Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ZVvd8hahuk46tdRf9uyM8YZTKTM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "yEMW2FRkhOo"
+      },
+      "snippet": {
+        "publishedAt": "2021-06-24T08:08:47Z",
+        "channelId": "UCOei1E1Vqq10S913OEqTWGw",
+        "title": "Podlodka Backend Crew – Публичное собеседование по базам данных",
+        "description": "28 июня начинается новый сезон конференции Podlodka Backend Crew (https://bit.ly/2SX9i5t)! Билеты и расписание по ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/yEMW2FRkhOo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/yEMW2FRkhOo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/yEMW2FRkhOo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Podlodka",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-06-24T08:08:47Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "CcQdVzInp21unOUsi0kFt3oQmbM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "GGSFizyv7fg"
+      },
+      "snippet": {
+        "publishedAt": "2021-01-13T09:26:21Z",
+        "channelId": "UCOei1E1Vqq10S913OEqTWGw",
+        "title": "Podlodka #195 – Алгоритмы и собеседования",
+        "description": "Вращаешь красно-черное дерево, проходишь алгоритмический собес, а потом… Внезапно на работе этим заниматься не ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/GGSFizyv7fg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/GGSFizyv7fg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/GGSFizyv7fg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Podlodka",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-01-13T09:26:21Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "87Q4GdczU9w0G-tmDMfOvtQ6dKM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "7W8FOa40b3Y"
+      },
+      "snippet": {
+        "publishedAt": "2022-03-29T08:46:42Z",
+        "channelId": "UCOei1E1Vqq10S913OEqTWGw",
+        "title": "Podlodka #261 – Стриминг видео",
+        "description": "Что происходит с видео вашего котика, которое вы загружаете на какой-нибудь стриминговый сервис, а потом скидываете ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/7W8FOa40b3Y/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/7W8FOa40b3Y/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/7W8FOa40b3Y/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Podlodka",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-03-29T08:46:42Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "jFtPUdI6ANPjSo7-sifvGRTDtAg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "k_GE-YfcnLg"
+      },
+      "snippet": {
+        "publishedAt": "2021-10-25T15:07:07Z",
+        "channelId": "UCOei1E1Vqq10S913OEqTWGw",
+        "title": "Podlodka #239 – Сети, часть 1: Интернет",
+        "description": "Замахнулись на необъятное и обсудили компьютерные сети! Одного выпуска для такой тему явно мало, поэтому пока мы ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/k_GE-YfcnLg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/k_GE-YfcnLg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/k_GE-YfcnLg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Podlodka",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-10-25T15:07:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ajitYIJDYdPd9R3fuPFtORppCC8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "PBjYqFNfLhw"
+      },
+      "snippet": {
+        "publishedAt": "2021-09-09T08:13:09Z",
+        "channelId": "UCOei1E1Vqq10S913OEqTWGw",
+        "title": "Podlodka QA Crew – Публичное собеседование QA лида. Алексей Петров, Ольга Артемьева",
+        "description": "В честь дня тестировщика в этот четверг в 10.00 состоится публичное собеседование на позицию QA Lead! Проводить ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/PBjYqFNfLhw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/PBjYqFNfLhw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/PBjYqFNfLhw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Podlodka",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-09-09T08:13:09Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "6xUpOiVw1bFrvVrszd6s7YWNcJk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "YbiHrgDx8j0"
+      },
+      "snippet": {
+        "publishedAt": "2021-06-28T17:39:12Z",
+        "channelId": "UCOei1E1Vqq10S913OEqTWGw",
+        "title": "Podlodka Soft Skills Crew – Интервью &quot;Как я научился софт-скиллам и захватил мир&quot;",
+        "description": "В этом интервью поговорим сразу с несколькими спикерами: Еленой Кунаковой из Яндекса, Денисом Неклюдовым из Lyft и ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/YbiHrgDx8j0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/YbiHrgDx8j0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/YbiHrgDx8j0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Podlodka",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-06-28T17:39:12Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "SBSTo7eJZSOIOSw4lyCuQ3FAyPQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "R26qjXib5i0"
+      },
+      "snippet": {
+        "publishedAt": "2022-08-22T14:33:54Z",
+        "channelId": "UCOei1E1Vqq10S913OEqTWGw",
+        "title": "Podlodka #282 – Nim, часть 1",
+        "description": "Efficient as C, Expressive as Python, Elegant as Lisp. В этом выпуске вместе с Гавром мы разбираемся с лучшим языком ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/R26qjXib5i0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/R26qjXib5i0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/R26qjXib5i0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Podlodka",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-08-22T14:33:54Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "zpkz8EJDZyc9nZyq7kN8AbIjv-8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "yYVrDDH5TlY"
+      },
+      "snippet": {
+        "publishedAt": "2020-07-13T20:46:48Z",
+        "channelId": "UCOei1E1Vqq10S913OEqTWGw",
+        "title": "Podlodka #172 – Java",
+        "description": "Наш цикл языковых выпусков будет неполным без языка, который c 2001 года не опускался в рейтинге TIOBE ниже второго ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/yYVrDDH5TlY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/yYVrDDH5TlY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/yYVrDDH5TlY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Podlodka",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-07-13T20:46:48Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "PEYOOUS9UsFBvgMCe0NHuECuKII",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Tly6SUFBaCM"
+      },
+      "snippet": {
+        "publishedAt": "2022-05-30T09:24:13Z",
+        "channelId": "UCOei1E1Vqq10S913OEqTWGw",
+        "title": "Podlodka #270 – Похудение",
+        "description": "Похудение ассоциируется с жесткими диетами на пророщенной пшенице и сельдерее. Гость выпуска – врач ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Tly6SUFBaCM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Tly6SUFBaCM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Tly6SUFBaCM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Podlodka",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-05-30T09:24:13Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "saRQhdybTiHJAV8LI9kmmaDtb3Q",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "YWelsG4mbik"
+      },
+      "snippet": {
+        "publishedAt": "2022-08-01T14:10:13Z",
+        "channelId": "UCOei1E1Vqq10S913OEqTWGw",
+        "title": "Podlodka #279 – Тьюринг-полнота",
+        "description": "В мире разработки есть несколько понятий, которые постоянно всплывают в разговорах, но при этом лишь единицы ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/YWelsG4mbik/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/YWelsG4mbik/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/YWelsG4mbik/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Podlodka",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-08-01T14:10:13Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "cLVbgzRjbtbvsh7qSKeJ6pEXKZg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "KgL2-mVIcIQ"
+      },
+      "snippet": {
+        "publishedAt": "2019-11-05T08:51:19Z",
+        "channelId": "UCOei1E1Vqq10S913OEqTWGw",
+        "title": "Podlodka #126 - Осознанность",
+        "description": "Альтернативное название этого выпуска – «как жить счастливо?», но уж очень оно кликбейтное. Не важно, кто вы ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/KgL2-mVIcIQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/KgL2-mVIcIQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/KgL2-mVIcIQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Podlodka",
+        "liveBroadcastContent": "none",
+        "publishTime": "2019-11-05T08:51:19Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ge5VZYceK68z0RAXNccE6_-V39g",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "P5ZK9Rbg1MQ"
+      },
+      "snippet": {
+        "publishedAt": "2021-03-01T20:54:40Z",
+        "channelId": "UCOei1E1Vqq10S913OEqTWGw",
+        "title": "Podlodka #205 – Как зарабатывать деньги",
+        "description": "В разные моменты жизни у нас появляется желание увеличить свой доход. До определенной степени это решается за ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/P5ZK9Rbg1MQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/P5ZK9Rbg1MQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/P5ZK9Rbg1MQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Podlodka",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-03-01T20:54:40Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "KZZc7cpQq8KBENNBk5BQMUWrJLs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ItRxwWHilXY"
+      },
+      "snippet": {
+        "publishedAt": "2020-01-13T08:22:00Z",
+        "channelId": "UCOei1E1Vqq10S913OEqTWGw",
+        "title": "Podlodka #146 – Изучение английского языка",
+        "description": "Так сложилось, что английский язык – это де-факто язык международного общения. А еще, так сложилось, что английский ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ItRxwWHilXY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ItRxwWHilXY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ItRxwWHilXY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Podlodka",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-01-13T08:22:00Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "fe2ffRyVJGm9yJroI6_LdWdZRs0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "hpQNflV_61k"
+      },
+      "snippet": {
+        "publishedAt": "2022-06-21T12:52:41Z",
+        "channelId": "UCOei1E1Vqq10S913OEqTWGw",
+        "title": "Podlodka #273 – Оценки не нужны",
+        "description": "Продолжаем нести знамя борьбы с карго-культом, и на сей раз под раздачу попали оценки сроков. Действительно, какая ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/hpQNflV_61k/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/hpQNflV_61k/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/hpQNflV_61k/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Podlodka",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-06-21T12:52:41Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "JmZoVWnE6qsWMuTqDkxHLkHiJ3E",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "GVXyrLB1tbk"
+      },
+      "snippet": {
+        "publishedAt": "2020-11-10T21:24:54Z",
+        "channelId": "UCOei1E1Vqq10S913OEqTWGw",
+        "title": "Устройство многопоточности в iOS / Александр Андрюхин (Авито)",
+        "description": "Понравилось видео и хочешь узнать что-то еще про iOS и многопоточность? Забирай весь плейлист на https://is.gd/kChYnl ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/GVXyrLB1tbk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/GVXyrLB1tbk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/GVXyrLB1tbk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Podlodka",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-11-10T21:24:54Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "lW5ZWAttD79pEifzORWJNQgE8-w",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "PdgejOhKkaE"
+      },
+      "snippet": {
+        "publishedAt": "2022-08-24T07:30:44Z",
+        "channelId": "UCUq8ilZTa9wNW5OBmMryNSA",
+        "title": "Подводная лодка «Белгород» – первый штатный носитель ядерных торпед",
+        "description": "Военный журналист Василий Фатигаров о новой подводной лодке «Белгород» А вы знали, что в июле к выполнению ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/PdgejOhKkaE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/PdgejOhKkaE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/PdgejOhKkaE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Руслан Осташко",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-08-24T07:30:44Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "zD44KyEaDSfI7OM9sbI62-KgQMQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "uMmDzxLHZQc"
+      },
+      "snippet": {
+        "publishedAt": "2022-08-25T17:28:09Z",
+        "channelId": "UCOei1E1Vqq10S913OEqTWGw",
+        "title": "Культура и soft-skills в зарубежных компаниях / Алексей Шаграев",
+        "description": "Благотворительная сессия в поддержу Анны Фонаревой Мы делаем эту сессию в поддержку нашей спикерки Анны ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/uMmDzxLHZQc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/uMmDzxLHZQc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/uMmDzxLHZQc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Podlodka",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-08-25T17:28:09Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "G2fhdvDSqKcQX62lxy-TfK38BOM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "z-27o6bJh8A"
+      },
+      "snippet": {
+        "publishedAt": "2021-05-27T18:16:08Z",
+        "channelId": "UCqLPYxuAz-WbdEBLBk_Tb7g",
+        "title": "Публичное собеседование: middle iOS-разработчик [Хекслет + Podlodka iOS Crew]",
+        "description": "Хекслет и Podlodka Crew представляют: публичное собеседование для middle iOS-разработчика! Действующие лица: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/z-27o6bJh8A/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/z-27o6bJh8A/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/z-27o6bJh8A/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Хекслет",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-05-27T18:16:08Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "mrzTH2-yZc8iPoF6VbYea8uKdmU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "LqRsB_3oEho"
+      },
+      "snippet": {
+        "publishedAt": "2019-11-20T08:45:34Z",
+        "channelId": "UCOei1E1Vqq10S913OEqTWGw",
+        "title": "Podlodka #138 – SRE",
+        "description": "SRE — много кто слышал, но мало кто в деталях понимает, что же это такое. Команда Podlodka всегда на страже вашей ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/LqRsB_3oEho/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/LqRsB_3oEho/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/LqRsB_3oEho/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Podlodka",
+        "liveBroadcastContent": "none",
+        "publishTime": "2019-11-20T08:45:34Z"
+      }
+    }
+  ]
+}
