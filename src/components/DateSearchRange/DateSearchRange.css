@@ -1,0 +1,19 @@
+button {
+  margin: 5px;
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid lightblue;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+button.active {
+  background-color: lightblue;
+}
+
+button:not(.active) + button.active:hover,
+button.active + button.active:hover,
+button.active + button.active:hover ~ button.active {
+  background-color: lightgrey;
+}
+

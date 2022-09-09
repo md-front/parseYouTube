@@ -1,192 +1,322 @@
-import React, { useState } from 'react';
-// import DATA from './data'
-import DATA from './data2'
-import VIDEOS from './videos'
-import { Fetch } from './utils'
-  
+import { useState } from 'react';
+import { declOfNum, Fetch } from './utils'
+import SearchField from './components/SearchField';
+import ChannelItem from './components/ChannelItem';
+import DateSearchRange from './components/DateSearchRange';
+import FilterField from './components/FilterField';
+import './all.css'
 
-type imgUrl = {
-  url: string,
-  width?: number,
-  height?: number
-};
-
-interface ChannelCard {
+interface SearchItem {
   kind: string,
   etag: string,
   id: {
     kind: string,
+    videoId: string,
     channelId: string,
+    playlistId: string
   },
   snippet: {
-    publishedAt: string,
+    publishedAt: Date,
     channelId: string,
     title: string,
     description: string,
     thumbnails: {
-      default: imgUrl,
-      medium: imgUrl,
-      high: imgUrl
+      [key: string]: {
+        url: string,
+        width: number,
+        height: number
+      }
     },
     channelTitle: string,
-    liveBroadcastContent: string,
-    publishTime: string,
-  },
-  contentDetails?: {
-    upload: {
-      videoId: string
-    }
+    liveBroadcastContent: string
   }
 }
 
-type Items = Array<ChannelCard>
-
-// const MockChannelCard: ChannelCard = {
-//   kind: '',
-//   etag: '',
-//   id: {
-//     kind: '',
-//     channelId: '',
+// interface VideoItem {
+//   kind: string,
+//   etag: string,
+//   id: string,
+//   statistics: {
+//     viewCount: string,
+//     likeCount: string,
+//     dislikeCount: string,
+//     favoriteCount: string,
+//     commentCount: string
 //   },
-//   snippet: {
-//     publishedAt: '',
-//     channelId: '',
-//     title: '',
-//     description: '',
-//     thumbnails: {
-//       default: {
-//         url: ''
-//       },
-//       medium: {
-//         url: ''
-//       },
-//       high: {
-//         url: ''
-//       },
-//     },
-//     channelTitle: '',
-//     liveBroadcastContent: '',
-//     publishTime: '',
-//   }
+//   fileDetails: {
+//     fileName: string,
+//     fileSize: unsigned long,
+//     fileType: string,
+//     container: string,
+//     videoStreams: [
+//       {
+//         widthPixels: unsigned integer,
+//         heightPixels: unsigned integer,
+//         frameRateFps: double,
+//         aspectRatio: double,
+//         codec: string,
+//         bitrateBps: unsigned long,
+//         rotation: string,
+//         vendor: string
+//       }
+//     ],
+//     audioStreams: [
+//       {
+//         channelCount: unsigned integer,
+//         codec: string,
+//         bitrateBps: unsigned long,
+//         vendor: string
+//       }
+//     ],
+//     durationMs: unsigned long,
+//     bitrateBps: unsigned long,
+//     creationTime: string
+//   },
+//   suggestions: {
+//     processingErrors: [
+//       string
+//     ],
+//     processingWarnings: [
+//       string
+//     ],
+//     processingHints: [
+//       string
+//     ],
+//     tagSuggestions: [
+//       {
+//         tag: string,
+//         categoryRestricts: [
+//           string
+//         ]
+//       }
+//     ],
+//     editorSuggestions: [
+//       string
+//     ]
+//   },
 // }
 
+type TotalResults = number;
+type NextPageToken = string | undefined;
+
+export interface SearchJson {
+  kind: string,
+  etag: string,
+  nextPageToken: NextPageToken,
+  prevPageToken?: string,
+  regionCode: string,
+  pageInfo: {
+    totalResults: TotalResults,
+    resultsPerPage: number
+  },
+  items: Array<SearchItem>
+}
+
+type Extremum = Date | null;
+interface GetVideosParams {
+  minDate: Extremum, 
+  maxDate: Extremum
+}
+type GetVideos = (params: GetVideosParams) => void; 
 
 const App = () => {
-  const [channels, setChannels] = useState<Items | []>([]);
-  const [input, setInput] = useState('blackufa');
+  const [channels, setChannels] = useState<Array<SearchItem>>([]);
   const [selectedChannel, setSelectedChannel] = useState<any | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [videos, setVideos] = useState<Array<SearchItem>>([]);
+  const [nextPageToken, setNextPageToken] = useState<NextPageToken>(undefined);
+  const [alert, setAlert] = useState<string>('');
 
+  const [filterInclude, setFilterInclude] = useState<Array<string>>([]);
 
-  const [videos, setVideos] = useState([]);
+  const search = async (inputValue: string) => {
+    setSelectedChannel(null)
+    setVideos([])
 
-  const search = async () => {
-    const search = await Fetch(`/search?part=snippet&type=channel&q=${input}`);
-    setChannels(search.items as Items); 
+    const search: SearchJson = await Fetch(`/search`,
+    {
+      part: `snippet`,
+      order: `videoCount`,
+      type: `channel`,
+      q: inputValue,
+    });
+    setChannels(search.items); 
   }
 
-  let i = 0;
+  const getVideos: GetVideos = async ({ minDate, maxDate }) => {
+    setLoading(true)
+    setAlert('')
 
-  const getAllVideos = async () => {
-    let videos: any = [];
+    const newVideos = videos; 
 
-    const getPlaylistItems = async (nextPageToken = '') => {
-      const channelId =  selectedChannel.id.channelId
-      const playlistId = `UU${channelId.slice(2, channelId.length)}`
+    const videosJson: SearchJson = await Fetch(`/search`,
+    {
+      part: `snippet, id`,
+      channelId: selectedChannel.id.channelId,
+      order: 'viewCount',
+      publishedAfter: minDate?.toISOString(),
+      publishedBefore: maxDate?.toISOString(),
+      type: 'video',
+      pageToken: nextPageToken,
+      q: filterInclude.join('|')
+    });
 
-      const activitiesJson = await Fetch(`/playlistItems?part=contentDetails&playlistId=${playlistId}${nextPageToken && `&pageToken=${nextPageToken}`}`);
-      const videoIds = activitiesJson.items.map((activity: any) => activity.contentDetails.videoId);
-
-      const videoIdsStr = encodeURIComponent(videoIds.join(','))
-      const videosWithStat = await Fetch(`/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoIdsStr}`)
-      videos.push(...videosWithStat.items);
-
-      if(activitiesJson.nextPageToken && i++ < 1) {
-        await getPlaylistItems(activitiesJson.nextPageToken)
-      }
+    if(!videosJson.items.length) {
+      setAlert('Видео за данный период нет')
+      setLoading(false)
+      return;
     }
 
-    await getPlaylistItems()
+    const videosStatistics = await Fetch(`/videos`, {
+      part: 'id, snippet, contentDetails, statistics',
+      id: videosJson.items.map(video => video.id.videoId)
+    })
+
+    newVideos.push(...videosStatistics.items);
     
-    const sortedVideos = videos.sort((a: any, b: any) => Number(b.statistics.viewCount) - Number(a.statistics.viewCount))
-    
-    setVideos(sortedVideos);
+    setVideos(newVideos);
+    setNextPageToken(videosJson.nextPageToken)
+    setLoading(false)
   }
 
-  const buildYears = () => {
-    const first = new Date().getFullYear() - 1
-    const last = new Date(selectedChannel.snippet.publishTime).getFullYear()
+  const addInclude = (value: string) => {
+    setFilterInclude([
+      ...filterInclude,
+      value
+    ])
+  }
 
-    const result = [];
+  const formatDuration = (durationStr: any) => {
+    let duration = durationStr.match(/\d+/ig);
 
-    for(let i = first; i > last; i--) {
-      result.push(i)
+    return duration.reverse()
+                   .map((item: any, i: any, arr: any) => {
+                     if(i === 3) {
+                       return null;
+                     }
+
+                     if(i === 2 && arr[3]) {
+                       return String(+item + 24 * +arr[3])
+                     }
+
+                     if(i !== arr.length - 1) {
+                       return item.padStart(2, '0')
+                     }
+
+                     return item
+                   })
+                   .filter(Boolean)
+                   .reverse()
+                   .join(':')
+  }
+  
+  const formatViews = (views: any) => {
+    let roundOn = 0;
+    let count = '';
+
+    if(+views > 999999) {
+      count = ' млн'
+      roundOn = 6;
+    } else if(+views > 999) { 
+      count = ' тыс.'
+      roundOn = 3;
+    }
+    
+    let round = views.substring(0, views.length - roundOn);
+    const additionalSymbol = views.substring(views.length - roundOn, views.length - roundOn + 1);
+
+    if(roundOn && round < 10 && additionalSymbol > 0) {
+      round = `${round},${additionalSymbol}`
     }
 
-    return result;
+    return `${round}${count} просмотров`
+  }
+
+  const formatDate = (date: string) => {
+    const HOUR = 1000*60*60;
+    const DAY = HOUR*24;
+    const diff = new Date().getTime()-new Date(date).getTime();
+    
+    const years = Math.floor(diff/(DAY*365));
+
+    if(years > 0) {
+      const lang = declOfNum(years, ['год','года','лет'])
+      return `${years} ${lang} назад`
+    }
+
+    const months = Math.floor(diff/(DAY*30));
+
+    if(months > 0) {
+      const lang = declOfNum(months, ['месяц','месяца','месяцев'])
+      return `${months} ${lang} назад`
+    }
+
+    const days = Math.floor(diff/(DAY));
+
+    if(days > 0) {
+      const lang = declOfNum(days, ['день','дня','дней'])
+      return `${days} ${lang} назад`
+    }
+
+    const hours = Math.floor(diff/(HOUR));
+
+    if(hours > 0) {
+      const lang = declOfNum(hours, ['час','часа','часов'])
+      return `${hours} ${lang} назад`
+    }
+
+    return `меньше часа назад`
   }
 
   return (
     <div className="App">
-
-      <div>
-        <input type="text" 
-              value={input}  
-              onChange={(e) => setInput(e.target.value)} />
-        <button onClick={search}>search</button>
-      </div> 
+      <SearchField search={search} />
 
       {!selectedChannel && channels.map((channel) => 
-        <div style={{display: 'flex', alignItems: 'center'}} key={channel.id!.channelId}>
-          <img src={channel.snippet.thumbnails.default.url} style={{borderRadius: '50%'}} />
-          <div>
-            <h2>{channel.snippet.channelTitle}</h2>
-            <p>{channel.snippet.description}</p>
-            {/* @ts-ignore TODO */}
-            {channel.id.channelId &&  
-              /* @ts-ignore */
-              <button onClick={() => setSelectedChannel(channel)}>Это оно! (save)</button>
-            }
-            <hr />
-          </div>
-      </div>
-      )}
+        <ChannelItem channel={channel} 
+        setSelectedChannel={setSelectedChannel}
+        key={channel.id.channelId}/>
+      )} 
 
       {selectedChannel && !videos.length &&
         <div>
-          {/* @ts-ignore */}
-          <h2>{selectedChannel.snippet.title}</h2>
-          {/* @ts-ignore */}
-          <p>
-            <button>декабрь</button>
-            <button>ноябрь</button>
-            <button>октябрь</button>
-            <button>сентябрь</button>
-            <button>август</button>
-            <button>июль</button>
-            <button>июнь</button>
-            <button>май</button>
-            <button>апрель</button>
-            <button>март</button>
-            <button>февраль</button>
-            <button>январь</button>
-            {buildYears().map(year => 
-              <button>{year}</button>
-            )}
-          </p>
-          <button onClick={getAllVideos}>найти</button>
-        </div>
-        // *по дефолту последний месяц
-      }
+          <div>
+            <FilterField title=''
+                        addInclude={(value:string) => addInclude(value)} /> 
 
-      {videos.map(({id, snippet, statistics}: any) => 
-        <div key={id}>
-          <img src={snippet.thumbnails.medium.url} alt="" />
-          <h2>{snippet.title}  <a href={`https://www.youtube.com/watch?v=${id}`}>link</a></h2>
-          <span>{new Date(snippet.publishedAt).toDateString()}</span>
-          <h3>{statistics.viewCount} просмотров</h3>
-          <hr />
+            <div>
+              {filterInclude.map(filterItem => 
+                <button key={filterItem}>{filterItem}</button>  
+              )}
+            </div>
+          </div>
+            <hr />
+          <DateSearchRange selectedChannel={selectedChannel} 
+          getVideos={getVideos} />
         </div>
-      )}
+      }
+      {loading && <h2>Загрузка ...</h2>}
+
+      {alert && <h2>{alert}</h2>}
+      
+      <div className='videoItems'>
+        {videos.map(({id, snippet, statistics, contentDetails}: any) => 
+          <div key={id} className='videoItem'>
+            <a href={`https://www.youtube.com/watch?v=${id}`} 
+               className='videoItem__top'>
+              <img src={snippet.thumbnails.medium.url} alt="" />
+              <h3 className='videoItem_duration'>{formatDuration(contentDetails.duration)}</h3>
+            </a>
+            <a href={`https://www.youtube.com/watch?v=${id}`} className="videoItem__title">{snippet.title}</a>
+            <div className='videoItem__info'>{formatViews(statistics?.viewCount)}</div>
+            <div className='videoItem__info'>{formatDate(snippet.publishedAt)}</div>
+          </div>
+        )}
+      </div>
+
+      {nextPageToken && 
+        <button onClick={() => getVideos({} as GetVideosParams)}>MORE</button>
+      }
     </div>
   );
 }
